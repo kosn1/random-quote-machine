@@ -10,8 +10,8 @@ import { faQuoteRight } from "@fortawesome/free-solid-svg-icons";
 let quoteWarehouse = "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
 
 function App() {
-  const [quote, setQuote] = useState("Remember no one can make you feel inferior without your consent."); 
-  const [author,setAuthor] = useState("Mr. Author");
+  const [quote, setQuote] = useState("Everything you’ve ever wanted is on the other side of fear."); 
+  const [author,setAuthor] = useState("George Addair");
   const [randomNumber,setRandomNumber] = useState(0);
   const [quotesArray,setQuotesArray] = useState(null);
   const [bgColor,setBgColor] = useState("#282c34")
@@ -27,10 +27,6 @@ function App() {
     }
     ,[quoteWarehouse])
   
-  const changeQuote = ()=>{
-    setQuote("Life shrinks or expands in proportion to one’s courage.");
-    setAuthor("Whateva Nerw Author");
-  }
   
   const getRandomQuote = () =>{
     let randomInteger=Math.floor(quotesArray.length * Math.random());
